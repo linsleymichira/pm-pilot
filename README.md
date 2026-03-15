@@ -309,6 +309,14 @@ skills/my-category/my-skill/SKILL.md
 ```
 Use any existing skill as a template. The frontmatter (name, description, triggers) is what Claude Code uses to match your requests to the right skill.
 
+## Companion Projects
+
+- [Bug Shepherd](https://github.com/mshadmanrahman/bug-shepherd) — Zero-code bug triage system. Sync, reproduce, and manage bugs without reading a single line of code. Works with Jira, Linear, and GitHub Issues.
+
 ## License
 
 MIT
+
+---
+
+*Built by a PM, for PMs. Pure markdown, no build step, no dependencies.*
