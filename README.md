@@ -309,9 +309,16 @@ skills/my-category/my-skill/SKILL.md
 ```
 Use any existing skill as a template. The frontmatter (name, description, triggers) is what Claude Code uses to match your requests to the right skill.
 
-## Companion Projects
+## Part of the PM Toolkit Family
 
-- [Bug Shepherd](https://github.com/mshadmanrahman/bug-shepherd) — Zero-code bug triage system. Sync, reproduce, and manage bugs without reading a single line of code. Works with Jira, Linear, and GitHub Issues.
+Open-source tools for PMs who ship with AI:
+
+| Tool | What it does |
+|------|-------------|
+| **PM Pilot** | **You are here** |
+| [Bug Shepherd](https://github.com/mshadmanrahman/bug-shepherd) | Zero-code bug triage with parallel AI agents |
+| [Tech-to-PM Translator](https://github.com/mshadmanrahman/tech-to-pm-translator) | Convert developer docs into PM-friendly knowledge bases |
+| [Morning Digest](https://github.com/mshadmanrahman/morning-digest) | AI-powered daily briefing from calendar, email, and Slack |
 
 ## License
 
