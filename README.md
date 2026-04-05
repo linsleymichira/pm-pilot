@@ -11,344 +11,326 @@
 </p>
 
 <p align="center">
-  <b>25 skills, 6 rules, 5 agents, 4 slash commands.</b><br/>
-  Everything a technical PM needs to ship faster with AI.
+  <b>Claude Code, set up for Product Managers.</b><br/>
+  Meeting prep, weekly status, PRDs, market sizing, stakeholder intelligence — out of the box.
 </p>
 
 <p align="center">
   <img src="assets/terminal-structure.png" alt="PM Pilot directory structure" width="640" />
 </p>
 
-## Install
+---
+
+> **New to Claude Code entirely?** Start at [claudecodeguide.dev](https://claudecodeguide.dev) first — it's a friendly, jargon-free guide that gets you set up in under an hour. Come back here once you're running.
+
+---
+
+## What is this?
+
+You just installed Claude Code. It's powerful. But right now it's a blank slate — it doesn't know your projects, your team, your meeting rhythm, or how you write.
+
+PM Pilot is a pre-built collection of **skills**, **memory templates**, and **rules** that turns Claude Code into a PM's daily operating system. Instead of building everything from scratch, you install PM Pilot and get:
+
+- **"Prep for my meeting with Sarah"** → a full briefing pulled from Jira, Slack, Calendar, and your own notes about Sarah — in 30 seconds
+- **"Weekly status"** → your accomplishment report written and ready to paste, pulled from actual completed work
+- **"Write a PRD for X"** → guided through proper PM thinking first (braindump before template)
+- **"Size the market for AI code assistants"** → TAM/SAM/SOM with methodology and sources
+
+No coding required. These are markdown files. Claude Code reads them and knows what to do.
+
+---
+
+## Before you install
+
+You need:
+- **Claude Code** installed ([claudecodeguide.dev](https://claudecodeguide.dev) has a beginner-friendly setup guide)
+- A terminal (macOS Terminal, iTerm2, Warp, or the terminal built into VS Code all work)
+- A Claude subscription or Anthropic API key (required for Claude Code itself)
+
+That's it. PM Pilot is pure markdown — no Node.js, no Python, no build step.
+
+---
+
+## Install (5 minutes)
+
+### Step 1: Clone PM Pilot
+
+Open your terminal and run:
 
 ```bash
-# As a Claude Code plugin (recommended)
-claude plugin install pm-pilot
-
-# Or clone and configure manually
 git clone https://github.com/mshadmanrahman/pm-pilot.git
 cd pm-pilot
-# Copy skills/rules/agents to your ~/.claude/ directory
 ```
 
-## Prerequisites
+Don't have `git`? [Download it here](https://git-scm.com/downloads) — it's a one-time install.
 
-- **Claude Code** installed and working ([get it here](https://docs.anthropic.com/en/docs/claude-code))
-- A terminal (macOS Terminal, iTerm2, Warp, VS Code terminal, etc.)
-- An Anthropic API key or Claude Max subscription (you need this for Claude Code itself)
-
-That's it. No Node.js, no Python, no build step. PM Pilot is pure markdown.
-
-## Quick Start (5 minutes)
-
-### Step 1: Install
+### Step 2: Copy everything to Claude Code
 
 ```bash
-# Option A: As a Claude Code plugin (recommended)
-claude plugin install pm-pilot
+# Create the directories Claude Code looks in
+mkdir -p ~/.claude/skills ~/.claude/rules ~/.claude/agents ~/.claude/commands ~/.claude/memory
 
-# Option B: Clone and install manually
-git clone https://github.com/mshadmanrahman/pm-pilot.git
+# Copy PM Pilot's skills, rules, agents, and commands
+cp -r skills/* ~/.claude/skills/
+cp -r rules/* ~/.claude/rules/
+cp -r agents/* ~/.claude/agents/
+cp -r commands/* ~/.claude/commands/
+
+# Set up your memory file (this is where Claude remembers things about you)
+cp memory/MEMORY-TEMPLATE.md ~/.claude/memory/MEMORY.md
 ```
 
-If you used Option B, copy the pieces to your Claude Code directory:
-```bash
-# Copy skills, rules, agents, and commands to user-level
-cp -r pm-pilot/skills/* ~/.claude/skills/
-cp -r pm-pilot/rules/* ~/.claude/rules/
-cp -r pm-pilot/agents/* ~/.claude/agents/
-cp -r pm-pilot/commands/* ~/.claude/commands/
+### Step 3: Run the setup wizard
 
-# Create your memory directory
-mkdir -p ~/.claude/memory
-cp pm-pilot/memory/MEMORY-TEMPLATE.md ~/.claude/memory/MEMORY.md
-```
+Open Claude Code in any directory and type:
 
-### Step 2: Connect Your Tools (optional but recommended)
-
-PM Pilot works best when Claude Code has MCP servers connected. These are the most impactful:
-
-| Priority | MCP Server | What it unlocks |
-|----------|-----------|-----------------|
-| High | **Atlassian** (Jira + Confluence) | meeting-prep, weekly-status, deep-context, ask-company |
-| High | **Slack** | meeting-prep, weekly-status, deep-context |
-| High | **GitHub** | weekly-status, search-first, code-review |
-| Medium | **Gmail/Calendar** | meeting-prep |
-| Medium | **Playwright** | dogfood (browser-based QA) |
-
-You can add MCP servers in Claude Code settings or via `claude mcp add`.
-
-**No MCP servers?** PM Pilot still works. Skills like market-sizing, writing-style, tdd-workflow, and security-review work with zero external connections.
-
-### Step 3: Configure for Your Org
-
-Run the interactive setup wizard:
 ```
 /configure-pm-pilot
 ```
 
-Or configure manually:
-1. **Set your company name**: Edit `skills/pm-core/ask-company/SKILL.md` and replace `[YOUR_COMPANY]` in the Configuration section
-2. **Seed your memory**: Open `~/.claude/memory/MEMORY.md` and add your current projects and key stakeholders (see `examples/memory-example.md` for format)
-3. **Set your writing voice** (optional): Run the `writing-style` skill with 2-3 sample posts
+This will ask you a few questions (your company name, which tools you use) and configure everything automatically.
 
-### Step 4: Try It
-
-Open Claude Code in any project and try these:
+### Step 4: Try your first command
 
 ```
-"prep for my meeting with Sarah"          → meeting briefing from Jira/Slack/Calendar
-"weekly status"                           → auto-generated accomplishment report
-"size the market for AI code assistants"  → TAM/SAM/SOM analysis
-"dogfood https://myapp.com"               → systematic QA with bug reports
-"/plan"                                   → implementation plan for any feature
-"tell me everything about Project X"      → cross-channel research synthesis
+prep for my meeting with [someone's name]
 ```
 
-### Step 5: Build the Habit
-
-The more you use PM Pilot, the smarter it gets:
-
-```
-Day 1:   Memory is empty. You explain your projects.
-Day 5:   Memory has your projects, people, preferences. Less explaining.
-Day 15:  Memory has your process, lessons, patterns. Almost zero re-explaining.
-Day 30:  New sessions start with full context. You just say what to do.
-```
-
-The key is **corrections compound**. When you correct Claude, it saves a feedback memory. That correction persists forever. You never repeat yourself.
+Claude will ask you which sources to check (Jira, Slack, Calendar, etc.) if it doesn't have them connected yet. It still produces a useful briefing — it just uses what it has access to.
 
 ---
 
-## What's Inside
+## Connecting your tools (optional, but powerful)
 
-### PM Core Skills
+PM Pilot works immediately. But it gets dramatically more useful when Claude Code can see your actual work tools. You connect these through **MCP servers** — think of them as plugins that let Claude read from Jira, Slack, etc.
 
-| Skill | Trigger | What it does |
-|-------|---------|--------------|
-| `meeting-prep` | "prep for my meeting with X" | Pulls context from Jira, Slack, Confluence, Calendar + org political context into a briefing |
-| `people-sync` | "sync people from meeting" | Processes a Granola transcript and updates per-person stakeholder files with positions, pushbacks, and commitments |
-| `weekly-status` | "weekly status" | Generates accomplishment report from connected systems |
-| `deep-context` | "tell me everything about X" | Cross-channel research across all MCP tools |
-| `market-sizing` | "size the market for X" | TAM/SAM/SOM analysis with data sources and assumptions |
-| `ask-company` | "who owns X" | Enterprise knowledge assistant (configure for your org) |
-| `dogfood` | "dogfood this app" | Systematic QA with Playwright: finds bugs, produces repro steps |
-| `lenny-podcast` | "what does Lenny say about X" | Search 269+ PM podcast episodes for advice |
-| `prd` | "write a PRD for X" | Generate one-pagers, briefs, full PRDs, or RFCs at the right depth |
-| `prioritize` | "rank these features" | Score and rank with RICE, ICE, WSJF, MoSCoW, Kano, Value/Effort, Weighted |
-| `synthesize-interviews` | "synthesize these interviews" | Turn raw interviews into themes, pain points, and recommendations |
-| `critique` | "critique this doc" | Pressure-test any document for logic, assumptions, and completeness |
+| Tool | What it unlocks | How to add |
+|------|----------------|------------|
+| **Jira / Confluence** | meeting-prep, weekly-status, deep-context | [Atlassian MCP](https://github.com/sooperset/mcp-atlassian) |
+| **Slack** | meeting-prep, weekly-status, deep-context | [Slack MCP](https://github.com/modelcontextprotocol/servers/tree/main/src/slack) |
+| **Google Calendar** | meeting-prep (knows your schedule) | [GCal MCP](https://github.com/nspady/google-calendar-mcp) |
+| **GitHub** | weekly-status, code context | [GitHub MCP](https://github.com/modelcontextprotocol/servers/tree/main/src/github) |
+| **Granola** | people-sync (updates stakeholder files from meeting transcripts) | [Granola MCP](https://granola.ai) |
 
-### Productivity Skills
+**No MCP servers connected?** Skills like `market-sizing`, `prd`, `prioritize`, `critique`, `writing-style`, and `tdd-workflow` work with zero external connections. Start there and add integrations as you go.
 
-| Skill | Trigger | What it does |
-|-------|---------|--------------|
-| `session-init` | "resume" | Reads memory + handoffs to restore context |
-| `handoff-doc` | "handoff" | Captures decisions, blockers, next steps for session continuity |
+---
+
+## What you can do with PM Pilot
+
+### Before a meeting
+
+```
+prep for my 1:1 with Sarah
+```
+
+Pulls recent interactions from Jira, Slack, and Calendar. Surfaces what Sarah is working on, what you owe her, what she owes you, and three suggested talking points. If you've filled in your [org survival map](#optional-power-files), it also shows political context — what Sarah actually wants from this meeting, and how to frame it.
+
+### After a meeting
+
+```
+sync people from the product review meeting
+```
+
+Reads your Granola transcript. Updates each participant's stakeholder file with what they said, what they pushed back on, and what they committed to. Flags unresolved commitments from past meetings.
+
+### Every week
+
+```
+weekly status
+```
+
+Generates your accomplishment report from actual completed tickets, merged PRs, and meeting outcomes. Not from memory — from connected systems.
+
+### For any product decision
+
+```
+write a PRD for [feature]
+```
+
+PM Pilot won't open a template immediately. It asks for your messy thinking first — the contradictions, the uncertainties, the things you haven't figured out yet. Then it structures it. You get better docs because the thinking happens before the formatting.
+
+### For strategy and research
+
+```
+size the market for AI-powered PM tools
+```
+
+```
+competitive analysis of [product]
+```
+
+```
+tell me everything about Project X
+```
+
+---
+
+## How the memory system works
+
+Claude Code forgets everything between sessions by default. PM Pilot fixes this with a structured memory system — a set of files Claude reads at the start of every session.
+
+```
+~/.claude/memory/
+  MEMORY.md              ← always loaded, under 200 lines — your current projects and people
+  project_*.md           ← one file per project you own
+  feedback_*.md          ← corrections you've made (so Claude doesn't repeat mistakes)
+  user_*.md              ← your preferences and working style
+  people/                ← one file per key person (grows after every meeting)
+    sarah-chen.md
+    marco-vidal.md
+```
+
+**Day 1:** Memory is empty. You explain your projects once.  
+**Day 5:** Memory has your projects, people, and preferences. Much less explaining.  
+**Day 15:** Patterns and lessons saved. Almost zero re-explaining.  
+**Day 30:** New sessions start with full context. You just say what to do.
+
+The key insight: every correction you make gets saved. You tell Claude something once — it doesn't repeat the same mistake.
+
+### Optional power files
+
+Two additional files that compound over time. Copy from the templates to activate:
+
+| File | What it does |
+|------|-------------|
+| `memory/org-survival-template.md` → `~/.claude/memory/org-survival.md` | Power map of key stakeholders: what they actually want, their risk patterns, how to approach them. Read automatically by `meeting-prep`. |
+| `memory/judgment-log-template.md` → `~/.claude/memory/judgment-log.md` | Track PM judgment calls with Brier scores before the outcome is known. Watch your calibration improve over time. |
+
+```bash
+cp memory/org-survival-template.md ~/.claude/memory/org-survival.md
+cp memory/judgment-log-template.md ~/.claude/memory/judgment-log.md
+```
+
+---
+
+## Full skill reference
+
+### PM Core
+
+| Skill | How to trigger it | What it does |
+|-------|------------------|--------------|
+| `meeting-prep` | "prep for my meeting with X" | Briefing from Jira, Slack, Calendar + political context from your org survival map |
+| `people-sync` | "sync people from meeting" | Reads Granola transcript → updates per-person stakeholder files with positions, pushbacks, commitments |
+| `weekly-status` | "weekly status" | Accomplishment report from connected systems — not from memory |
+| `deep-context` | "tell me everything about X" | Cross-channel research across all connected tools |
+| `market-sizing` | "size the market for X" | TAM/SAM/SOM with data sources and clear assumptions |
+| `ask-company` | "who owns X at my company" | Enterprise knowledge assistant (configure for your org) |
+| `dogfood` | "dogfood this app" | Systematic QA with bug reports and repro steps |
+| `lenny-podcast` | "what does Lenny say about X" | Search 269+ PM podcast episodes for relevant advice |
+| `prd` | "write a PRD for X" | Braindump first, then structure — one-pagers, briefs, full PRDs, or RFCs |
+| `prioritize` | "rank these features" | Score with RICE, ICE, WSJF, MoSCoW, Kano, or Value/Effort |
+| `synthesize-interviews` | "synthesize these interviews" | Themes, pain points, and recommendations from raw interview notes |
+| `critique` | "critique this doc" | Pressure-test any document for logic gaps, assumptions, and completeness |
+
+### Productivity
+
+| Skill | How to trigger it | What it does |
+|-------|------------------|--------------|
+| `session-init` | "resume" or start of day | Reads memory and handoffs to restore context — no cold starts |
+| `handoff-doc` | "create a handoff" | Captures decisions, blockers, and next steps for session continuity |
 | `strategic-compact` | (proactive) | Suggests context compaction at logical milestones |
-| `orchestrator` | "orchestrate" | Decomposes work into parallel waves of sub-agents |
-| `manifest-reader` | "what did agents find" | Summarizes sub-agent results |
-| `meta-observer` | "observe skills" | Tracks skill performance and emerging patterns |
+| `orchestrator` | "orchestrate this" | Decomposes complex work into parallel sub-agent waves |
+| `manifest-reader` | "what did agents find" | Summarizes results from sub-agent research |
+| `meta-observer` | "observe my skills" | Tracks skill performance and emerging workflow patterns |
 
-### Dev Skills (for PMs who code)
+### Dev (for PMs who write code)
 
-| Skill | Trigger | What it does |
-|-------|---------|--------------|
-| `tdd-workflow` | writing new code | Enforces test-first development, 80%+ coverage |
-| `verification-loop` | "verify" or before commits | Lint, type-check, test, security scan |
-| `search-first` | before implementing | Research existing solutions before writing code |
-| `security-review` | after writing auth/API code | OWASP checklist with severity ratings |
+| Skill | How to trigger it | What it does |
+|-------|------------------|--------------|
+| `tdd-workflow` | when writing new code | Enforces test-first development: RED → GREEN → REFACTOR |
+| `verification-loop` | "verify" or before commits | Lint, type-check, test, security scan in sequence |
+| `search-first` | before implementing anything | Research existing solutions before writing new code |
+| `security-review` | after writing auth or API code | OWASP checklist with severity ratings |
 
-### Content Skills
+### Content
 
-| Skill | Trigger | What it does |
-|-------|---------|--------------|
+| Skill | How to trigger it | What it does |
+|-------|------------------|--------------|
 | `market-research` | "competitive analysis of X" | Source-attributed market and competitor research |
-| `writing-style` | writing long-form content | Applies your configured voice profile to drafts |
+| `writing-style` | writing long-form content | Applies your voice profile to drafts |
 | `writing-substack` | "write a Substack Note" | Platform-optimized short-form content |
 
-### Slash Commands
+### Slash commands
 
 | Command | What it does |
 |---------|--------------|
 | `/plan` | Create implementation plan, wait for approval before coding |
 | `/code-review` | Review staged changes for quality, security, maintainability |
-| `/verify` | Run full verification loop (lint + test + security) |
+| `/verify` | Full verification: lint + test + security |
 | `/tdd` | Enforce test-driven development for a feature |
 
 ### Agents
 
-| Agent | Dispatched by | Purpose |
-|-------|---------------|---------|
-| planner | `/plan` | Phased implementation planning with risk analysis |
-| code-reviewer | `/code-review` | Code quality and security review |
-| build-error-resolver | build failures | Fix build errors with minimal diffs |
-| tdd-guide | `/tdd` | Enforce RED-GREEN-REFACTOR cycle |
-| file-analyzer | large file analysis | Summarize logs and verbose outputs |
+| Agent | What it does |
+|-------|--------------|
+| `planner` | Phased implementation planning with risk analysis |
+| `code-reviewer` | Code quality and security review |
+| `build-error-resolver` | Fix build errors with minimal diffs |
+| `tdd-guide` | Enforce RED-GREEN-REFACTOR cycle |
+| `file-analyzer` | Summarize logs and verbose outputs |
 
-## Setup
+---
 
-After installing, run the configuration wizard:
+## Troubleshooting
 
-```
-/configure-pm-pilot
-```
+### "Skills not showing up"
 
-This will:
-1. Detect your available MCP tools (Jira, Slack, Confluence, etc.)
-2. Set your company name for the `ask-company` skill
-3. Create your initial `MEMORY.md` from the template
-4. Validate that everything is connected
-
-## Memory System
-
-PM Pilot uses a file-based memory system that compounds learning across sessions:
-
-```
-memory/
-  MEMORY.md          # Index file (always loaded, under 200 lines)
-  project_*.md       # Project context
-  user_*.md          # People context
-  feedback_*.md      # Corrections and preferences
-  reference_*.md     # Pointers to external systems
-```
-
-**The key insight:** MEMORY.md is always in context. Every session starts with full knowledge of your projects, people, and preferences. No re-explaining needed.
-
-### Optional Power Files
-
-Two files that compound over time. Copy from `memory/` templates to activate:
-
-| File | What it does |
-|------|-------------|
-| `memory/org-survival.md` | Power map of key stakeholders — what they want, risks they carry, how to approach them. Read automatically by `meeting-prep`. |
-| `memory/judgment-log.md` | Brier score prediction log. Track a PM judgment call before the outcome. Score it after. Watch your calibration improve. |
-
-See `examples/` for populated examples.
-
-## Session Workflow
-
-```
-MORNING
-  Open Claude Code → MEMORY.md auto-loaded
-  "Continue the matchmaker redesign" → full context from memory
-  (or "read the latest handoff" → exact pickup from yesterday)
-
-DURING SESSION
-  Work normally
-  Corrections saved as feedback memories
-  New project info updates memory entries
-
-END OF DAY
-  "Create a handoff" → saves decisions + next steps
-  Learnings saved to memory → next session starts smarter
-```
-
-## Recommended Companion: RTK
-
-PM Pilot optimizes the **input side** (compressed rules, lazy-loaded skills, structured memory). For the **output side**, pair it with [RTK (Rust Token Killer)](https://github.com/rtk-ai/rtk), which strips noise from tool outputs before they hit context.
+Skills need to be in the right directory. Check:
 
 ```bash
-brew install rtk
-rtk init -g --hook-only
+ls ~/.claude/skills/pm-core/meeting-prep/SKILL.md
 ```
 
-Together: ~50% fewer input tokens + ~70% fewer output tokens. Significantly longer sessions before hitting limits or compaction.
+If missing, re-run the copy commands from Step 2. Restart Claude Code after.
 
-## Rules (Token-Optimized)
+### "meeting-prep returns nothing useful"
 
-Five compressed rules that load with every message (~600 tokens total):
-- `coding-style.md` - Immutability, file organization, error handling
-- `git-workflow.md` - Conventional commits, PR process
-- `testing.md` - TDD, 80% coverage minimum
-- `security.md` - Pre-commit security checklist
-- `session-workflow.md` - Memory and learning protocol
+This skill pulls from connected tools (Jira, Slack, Calendar). If none are connected, it will tell you what's missing and do its best with what's available. Add MCP servers to unlock the full briefing.
 
-## Customization
+### "Memory not loading between sessions"
 
-### Adding Your Company Knowledge
+MEMORY.md needs to be in a location Claude Code auto-loads:
+- Works everywhere: `~/.claude/memory/MEMORY.md`
+- Works in one project: `.claude/memory/MEMORY.md` in your project root
 
-Edit `skills/pm-core/ask-company/SKILL.md` and configure:
-- Your company name
-- Available MCP tools (Confluence, Jira, Slack, etc.)
-- Team structure and ownership areas
+### "Context filling up too fast"
 
-### Adding Your Writing Voice
+PM Pilot's rules use only ~950 tokens total — they're not the culprit. If sessions are filling up:
+1. Use `strategic-compact` to compact at natural milestones
+2. Use `handoff-doc` to save state, then `/clear` to start fresh
+3. Use `orchestrator` to move research into sub-agents
 
-Run the `writing-style` skill with 2-3 sample posts to extract your voice profile. The skill stores it and applies it to all future drafts.
-
-### Adding Project-Specific Skills
-
-Create a new skill directory:
-```
-skills/your-skill/SKILL.md
-```
-
-Follow the SKILL.md format from any existing skill as a template.
+---
 
 ## Philosophy
 
-1. **Memory over transcripts.** A 200-line MEMORY.md beats a 50K-token session replay.
-2. **Skills load on demand.** 25 skills, zero startup cost.
-3. **Rules are compressed.** 600 tokens, not 6,000.
-4. **Research before coding.** Search first, build second.
-5. **Every session compounds.** Corrections become rules. Patterns become skills.
-6. **Braindump before structure.** Never open a template before the thinking is externalised.
+1. **Braindump before structure.** Never open a template before the thinking is externalised.
+2. **Memory over transcripts.** A 200-line MEMORY.md beats a 50K-token session replay.
+3. **Skills load on demand.** 25 skills, zero startup cost.
+4. **Rules are compressed.** ~950 tokens, not 9,500.
+5. **Every session compounds.** Corrections become rules. Meetings become stakeholder intelligence.
+
+---
+
+## Part of the PM Toolkit Family
+
+| Tool | What it does |
+|------|-------------|
+| **PM Pilot** | **You are here** — Claude Code configured for PMs |
+| [Bug Shepherd](https://github.com/mshadmanrahman/bug-shepherd) | Zero-code bug triage with parallel AI agents |
+| [Tech-to-PM Translator](https://github.com/mshadmanrahman/tech-to-pm-translator) | Convert developer docs into PM-friendly knowledge bases |
+| [Morning Digest](https://github.com/mshadmanrahman/morning-digest) | AI-powered daily briefing from calendar, email, and Slack |
+
+---
 
 ## Contributing
 
 PRs welcome. To add a skill:
 1. Create `skills/category/your-skill/SKILL.md`
-2. Follow the frontmatter format (name, description, origin, version)
-3. Include clear triggers, step-by-step procedure, and output format
+2. Follow the frontmatter format (name, description, origin, version) from any existing skill
+3. Include: clear triggers, step-by-step procedure, output format
 4. Keep under 200 lines
-
-## Troubleshooting
-
-### "Skills not showing up"
-Skills need a `SKILL.md` file in their directory. Verify the path:
-```bash
-ls ~/.claude/skills/meeting-prep/SKILL.md
-```
-If missing, re-copy from the pm-pilot repo. Restart Claude Code after adding skills.
-
-### "meeting-prep / weekly-status returns nothing"
-These skills need MCP servers (Jira, Slack, etc.) to pull data. Check your connected tools:
-```bash
-claude mcp list
-```
-If no MCP servers are connected, these skills will tell you what's missing.
-
-### "Memory not loading"
-MEMORY.md must be in the right location for your project:
-- **User-level** (all projects): `~/.claude/memory/MEMORY.md`
-- **Project-level** (one project): `.claude/memory/MEMORY.md` in your project root
-
-Claude Code automatically loads MEMORY.md from these locations.
-
-### "Too many tokens / context filling up"
-PM Pilot's rules use only ~950 tokens. If context is filling up:
-1. Use `strategic-compact` to compact at logical milestones
-2. Use `handoff-doc` to save state, then `/clear` and resume
-3. Offload research to sub-agents with `orchestrator`
-
-### "How do I add my own skills?"
-Create a directory under `skills/` with a `SKILL.md` inside:
-```
-skills/my-category/my-skill/SKILL.md
-```
-Use any existing skill as a template. The frontmatter (name, description, triggers) is what Claude Code uses to match your requests to the right skill.
-
-## Part of the PM Toolkit Family
-
-Open-source tools for PMs who ship with AI:
-
-| Tool | What it does |
-|------|-------------|
-| **PM Pilot** | **You are here** |
-| [Bug Shepherd](https://github.com/mshadmanrahman/bug-shepherd) | Zero-code bug triage with parallel AI agents |
-| [Tech-to-PM Translator](https://github.com/mshadmanrahman/tech-to-pm-translator) | Convert developer docs into PM-friendly knowledge bases |
-| [Morning Digest](https://github.com/mshadmanrahman/morning-digest) | AI-powered daily briefing from calendar, email, and Slack |
 
 ## License
 
