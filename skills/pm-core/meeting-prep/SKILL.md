@@ -36,6 +36,16 @@ Before gathering, read `context/company.md` and `context/personas.md` if they ex
 - Topic given: use as search query.
 - No input: fetch next meeting from Google Calendar, extract attendees and title.
 
+### Step 0.5: Org-Survival + People File Check (Person-Based Only)
+
+Before gathering from external sources, read two local files:
+
+1. **`memory/org-survival.md`** — Check if person has an entry. Extract: what they want, risks they carry, recommended approach. Surface as **Political Context** block (2–3 lines max). Skip silently if not found.
+
+2. **`memory/people/{name}.md`** — Check for accumulated meeting history with this person. Extract: prior commitments they made (were they fulfilled?), communication style, known preferences. Fold into **Their Current Focus** and **Suggested Talking Points**.
+
+This is the highest-signal step — it's the context no live API can replicate.
+
 ### Step 1: Parallel Data Gathering (Fan-Out)
 
 Launch parallel searches across all connected MCP sources.
@@ -72,6 +82,11 @@ Output directly in conversation (do NOT create a file unless asked):
 ```markdown
 # Meeting Prep: {Person or Topic}
 **For:** {Meeting name if known} | **When:** {Time if known}
+
+## Political Context _(person-based, if found in org-survival.md)_
+- {What they want from this interaction}
+- {Any risk or tension to navigate}
+- {Recommended framing or approach}
 
 ## Last 3 Interactions
 1. **{Date}** ({source}): {1-2 sentence summary}

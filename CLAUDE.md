@@ -4,7 +4,7 @@ Product management toolkit for Claude Code. Designed for PMs who code.
 
 ## Skill Loading
 Load skills on demand by trigger, not at session start. Categories:
-- **PM Core**: meeting-prep, weekly-status, deep-context, market-sizing, ask-company, dogfood, lenny-podcast, prd, prioritize, synthesize-interviews, critique
+- **PM Core**: meeting-prep, people-sync, weekly-status, deep-context, market-sizing, ask-company, dogfood, lenny-podcast, prd, prioritize, synthesize-interviews, critique
 - **Productivity**: session-init, handoff-doc, strategic-compact, orchestrator, manifest-reader, meta-observer
 - **Dev**: tdd-workflow, verification-loop, search-first, security-review
 - **Content**: market-research, writing-style, writing-substack
@@ -44,9 +44,22 @@ All output documents must tag uncertain claims:
 - `[Source: X]` - Derived from a specific source
 - `[Open question]` - Needs stakeholder input
 
+## Memory Templates
+
+Two optional files that compound over time. Copy from `memory/` templates to activate:
+- `memory/org-survival.md` — Power map of key stakeholders. Read automatically by `/meeting-prep`.
+- `memory/judgment-log.md` — Brier score prediction log. Track PM judgment calibration over time.
+
+## PM Golden Rule
+
+Before writing any PRD, roadmap, strategy doc, OKR, or stakeholder one-pager:
+**Ask for the messy thinking first. Braindump before structure.**
+Never open a template before the thinking is externalised. See `rules/pm-golden-rule.md`.
+
 ## Principles
 - Simplicity first. No over-engineering.
 - Immutable data patterns. No mutation.
 - TDD for all new code. 80%+ coverage.
 - Research before coding. Check existing solutions first.
 - Memory compounds. Every session should leave the system smarter.
+- Thinking before templating. Braindump before structure.

@@ -6,12 +6,12 @@
   <a href="https://github.com/mshadmanrahman/pm-pilot/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="MIT License" /></a>
   <a href="https://github.com/mshadmanrahman/pm-pilot/stargazers"><img src="https://img.shields.io/github/stars/mshadmanrahman/pm-pilot?style=flat-square" alt="Stars" /></a>
   <img src="https://img.shields.io/badge/claude_code-plugin-black?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiByeD0iNCIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==" alt="Claude Code Plugin" />
-  <img src="https://img.shields.io/badge/skills-24-orange?style=flat-square" alt="24 Skills" />
+  <img src="https://img.shields.io/badge/skills-25-orange?style=flat-square" alt="25 Skills" />
   <img src="https://img.shields.io/badge/agents-5-purple?style=flat-square" alt="5 Agents" />
 </p>
 
 <p align="center">
-  <b>24 skills, 5 rules, 5 agents, 4 slash commands.</b><br/>
+  <b>25 skills, 6 rules, 5 agents, 4 slash commands.</b><br/>
   Everything a technical PM needs to ship faster with AI.
 </p>
 
@@ -126,7 +126,8 @@ The key is **corrections compound**. When you correct Claude, it saves a feedbac
 
 | Skill | Trigger | What it does |
 |-------|---------|--------------|
-| `meeting-prep` | "prep for my meeting with X" | Pulls context from Jira, Slack, Confluence, Calendar into a briefing |
+| `meeting-prep` | "prep for my meeting with X" | Pulls context from Jira, Slack, Confluence, Calendar + org political context into a briefing |
+| `people-sync` | "sync people from meeting" | Processes a Granola transcript and updates per-person stakeholder files with positions, pushbacks, and commitments |
 | `weekly-status` | "weekly status" | Generates accomplishment report from connected systems |
 | `deep-context` | "tell me everything about X" | Cross-channel research across all MCP tools |
 | `market-sizing` | "size the market for X" | TAM/SAM/SOM analysis with data sources and assumptions |
@@ -214,6 +215,15 @@ memory/
 
 **The key insight:** MEMORY.md is always in context. Every session starts with full knowledge of your projects, people, and preferences. No re-explaining needed.
 
+### Optional Power Files
+
+Two files that compound over time. Copy from `memory/` templates to activate:
+
+| File | What it does |
+|------|-------------|
+| `memory/org-survival.md` | Power map of key stakeholders — what they want, risks they carry, how to approach them. Read automatically by `meeting-prep`. |
+| `memory/judgment-log.md` | Brier score prediction log. Track a PM judgment call before the outcome. Score it after. Watch your calibration improve. |
+
 See `examples/` for populated examples.
 
 ## Session Workflow
@@ -279,10 +289,11 @@ Follow the SKILL.md format from any existing skill as a template.
 ## Philosophy
 
 1. **Memory over transcripts.** A 200-line MEMORY.md beats a 50K-token session replay.
-2. **Skills load on demand.** 24 skills, zero startup cost.
+2. **Skills load on demand.** 25 skills, zero startup cost.
 3. **Rules are compressed.** 600 tokens, not 6,000.
 4. **Research before coding.** Search first, build second.
 5. **Every session compounds.** Corrections become rules. Patterns become skills.
+6. **Braindump before structure.** Never open a template before the thinking is externalised.
 
 ## Contributing
 

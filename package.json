@@ -1,6 +1,6 @@
 {
   "name": "pm-pilot",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "The PM toolkit for Claude Code. Skills, rules, agents, and memory templates for product managers who code.",
   "author": "Shadman Rahman",
   "license": "MIT",
