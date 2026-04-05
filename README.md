@@ -321,6 +321,7 @@ PM Pilot's rules use only ~950 tokens total — they're not the culprit. If sess
 | [Bug Shepherd](https://github.com/mshadmanrahman/bug-shepherd) | Zero-code bug triage with parallel AI agents |
 | [Tech-to-PM Translator](https://github.com/mshadmanrahman/tech-to-pm-translator) | Convert developer docs into PM-friendly knowledge bases |
 | [Morning Digest](https://github.com/mshadmanrahman/morning-digest) | AI-powered daily briefing from calendar, email, and Slack |
+| [ROOT-KG](https://github.com/mshadmanrahman/root-kg) | Your knowledge graph. Ask questions across all your notes, meetings, and emails — cited answers in plain English. |
 
 ---
 
