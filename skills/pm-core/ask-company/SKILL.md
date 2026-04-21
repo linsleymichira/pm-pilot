@@ -15,27 +15,30 @@ Template for a company-specific knowledge assistant. Searches internal tools to 
 Customize these values for your organization before use:
 
 ```yaml
-company_name: "YourCompany"        # Replace with your company name
-trigger_phrase: "ask yourcompany"   # Replace with your trigger
+company_name: "JD North America"
+trigger_phrase: "ask jdna"
 
 # MCP tools available (uncomment what you have connected)
 sources:
   - confluence    # Wiki, specs, runbooks
   - jira          # Issues, epics, project tracking
   - slack         # Channel history, decisions
-  # - github      # Repos, PRs, code search
-  # - gmail       # Email threads
+  - gmail         # Email threads
+  # - github      # Repos, PRs, code search  [follow-up: install MCP]
   # - notion      # Pages and databases
   # - linear      # Issues and projects
 
 # Team structure (optional, improves routing)
+# TODO: add JDNA teams as they become relevant to queries.
 teams:
-  # - name: "Platform"
-  #   keywords: ["infra", "deployment", "CI/CD", "kubernetes"]
-  # - name: "Product"
-  #   keywords: ["PRD", "roadmap", "feature", "user research"]
-  # - name: "Data"
-  #   keywords: ["analytics", "pipeline", "BigQuery", "metrics"]
+  - name: "People / HR"
+    keywords: ["headcount", "talent", "compliance", "people data", "HR scorecard", "attrition"]
+  # - name: "Merch"
+  #   keywords: ["buying", "assortment", "allocation"]
+  # - name: "Stores"
+  #   keywords: ["retail ops", "store ops", "district"]
+  # - name: "Data / BI"
+  #   keywords: ["analytics", "dashboard", "BigQuery", "Snowflake", "metrics"]
 ```
 
 ## When to Activate
