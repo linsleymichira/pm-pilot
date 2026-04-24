@@ -1,6 +1,1 @@
-# Lessons Log
-
-Track mistakes to prevent repeats. Update after every correction.
-
-| Date | Mistake | Root Cause | Rule Created |
-|------|---------|-----------|-------------|
+/Users/linsleymichira/Documents/GitHub/Obsidian Vault/3 Work & Wealth/PM Pilot/Memory/lessons.md
