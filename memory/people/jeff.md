@@ -12,18 +12,18 @@ _Seeded: 2026-04-24. Source: DTLR Retail Merit Kickoff Meeting (2026-04-17) — 
 
 ## Scope
 
-Owns DTLR retail store operations end-to-end. Final approval authority for DTLR retail merit exceptions, band adjustments, and above-band comp. Clears upstream with Ryan [Open question: likely Ryan Cotton, DTLR exec/finance] in a weekly-cadence meeting and coordinates with Todd [Open question: last name/role, likely DTLR exec].
+Owns DTLR retail store operations end-to-end. Final approval authority for DTLR retail merit exceptions, band adjustments, and above-band comp. Clears upstream with **Ryan Geldrich** (DTLR — meets weekly to finalize) and **Todd Kirsin** (CEO, DTLR) for final sign-off on high-stakes comp calls.
 
 ## Current focus areas (as of Apr 2026)
 
-1. **FY26 DTLR retail merit cycle** — effective 2026-06-14 (paycheck 2026-07-03). 3% flat for ASMs + FT SAs; 9-box-based for RMs/DMs/SMs. Final approval meeting with Ryan week of 2026-04-20 to close out.
+1. **FY26 DTLR retail merit cycle** — effective 2026-06-14 (paycheck 2026-07-03). 3% flat for ASMs + FT SAs; 9-box-based for RMs/DMs/SMs. Final approval meeting with Ryan Geldrich week of 2026-04-20 to close out.
 2. **City Gear pay gap remediation** — 153 below-band EEs (115 CG + ~30–40 non-CG). Agreed to "rip the band-aid" and remediate all in this cycle. Merit applied first, then raise to band minimum; DM discretion with Jeff's approval on exceptions.
 3. **Above-band strategy (~360 EEs)** — conceded his initial instinct (3% raise for all) after Morgan + Jackie pushed lump-sum. Accepted: ASM/FT above max → 3%-annual-equivalent lump sum; SMs above max → talent-map-weighted lump sum within budget.
-4. **FY27 pay-band restructuring for high-volume stores** — deferred. Today's tiers are <$3M / >$3M stores; likely to add a $4M+ tier next year. Wants Jacob + Ryan involved before touching bands.
+4. **FY27 pay-band restructuring for high-volume stores** — deferred. Today's tiers are <$3M / >$3M stores; likely to add a $4M+ tier next year. Wants Jacob + Ryan Geldrich involved before touching bands.
 
 ## Commitments & follow-ups
 
-- **Jeff → team:** Finalize the lump-sum dollar amount with finance ("bean counters"). Ryan meeting w/o 2026-04-20.
+- **Jeff → team:** Finalize the lump-sum dollar amount with finance ("bean counters"). Ryan Geldrich meeting w/o 2026-04-20.
 - **Jeff → team:** Will notify the group if anything changes post-Ryan.
 
 ## Approach — what works

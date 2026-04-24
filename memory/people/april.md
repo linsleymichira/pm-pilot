@@ -10,7 +10,7 @@ _Seeded: 2026-04-24. Source: DTLR Retail Merit Kickoff Meeting (2026-04-17) — 
   - `amcduffie@dtlr.com` (primary)
   - `amcduffie@finishline.com` (used when coordinating with FL/JDNA-wide — dual-persona pattern like Seve)
 - **Location:** [Assumption] DTLR region — not confirmed
-- **Relationship to user:** Day-to-day DTLR HR operator. User partners with her to validate employee data, surface below-band cases, and execute merit cycles.
+- **Relationship to user:** Day-to-day DTLR HR operator. Reports to Jenny Pund (Director, Retail People BPs). User partners with her to validate employee data, surface below-band cases, and execute merit cycles.
 
 ## Scope
 

@@ -8,7 +8,7 @@ _Seeded: 2026-04-24. Sources: DTLR Retail Merit Kickoff Meeting (2026-04-17), se
 - **Title:** Compensation, Finish Line (per deck — [Open question] specific level/title)
 - **Email:** `jgray@finishline.com`
 - **Location:** [Assumption] Indianapolis, FL HQ
-- **Relationship to user:** Primary comp-team counterpart on JDNA retail merit + pay-band work. Frequent co-attendee on retail comp calls.
+- **Relationship to user:** **User's direct manager.** Linsley → Jacob → Seve Romero is the direct chain. Primary comp-team counterpart on JDNA retail merit + pay-band work.
 
 ## Scope
 
@@ -36,7 +36,8 @@ JDNA comp team — covers retail merit cycle mechanics, pay-band rule applicatio
 
 ## Political context
 
-- **Seve treats him as a driver.** Per seve.md, Seve delegates to Jacob on cross-brand pay-band work. Strong upward visibility.
+- **Reports directly to Seve.** Confirmed 2026-04-24. One of Seve's direct reports alongside Jackie Gessner — Jacob runs the comp/pay-band mechanics arm; Jackie runs talent/compliance/comp-philosophy.
+- **User's manager.** The most important political relationship for the user — Jacob's priorities are user's priorities; Jacob's visibility of user's work determines Seve's visibility of user's work.
 - **Part of the "corporate standpoint" pair** Blair referenced on 2026-04-17 — Jacob + Linsley together represent comp/BI on retail calls.
 
 ## Changelog

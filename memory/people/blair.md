@@ -8,7 +8,7 @@ _Seeded: 2026-04-24. Source: DTLR Retail Merit Kickoff Meeting (2026-04-17) — 
 - **Title:** Manager, People Business Partners — JDNA
 - **Email:** `borlansky@finishline.com`
 - **Location:** [Assumption] Indianapolis, FL HQ (same as user)
-- **Relationship to user:** Corporate-side People BP lead. Peer on JDNA-wide comp/merit workflows. Typically on the same calls as user.
+- **Relationship to user:** Corporate-side People BP lead. Reports to Jackie Gessner (peer of Jenny Pund, Sydney Purichia, Hannah Reeser under Jackie). Peer-level on JDNA-wide comp/merit workflows; typically on the same calls as user. **Backfill of half of Macy Miller's former role** — when Macy departed, Blair took the corporate People BPs half; Sydney took the back-of-house half.
 
 ## Scope
 
@@ -17,7 +17,9 @@ Manages the People BP function across JDNA corporate populations. Surfaces at DT
 ## Current focus areas (as of Apr 2026)
 
 1. **FY26 merit cycle — corporate populations** — area managers, RBPs, corporate EEs (mapped via corporate talent process, not retail 9-box).
-2. **Cross-functional alignment on JDNA-wide merit decisions.**
+2. **DTLR Merit Cycle operations** (2026-03-24 review) — close partner with Joyce Arena (DTLR merit lead) and Rosa Guzman (Workday talent maps). Owns following up on the Customer Care all-hourly-eligible exception decision inherited from Janelle Smith's prior-year ruling.
+3. **ERMS → Jira transition** — co-designing the ER system replacement with user, Sydney Purichia (peer), and Anthony Esslinger (scheduled post-merit-cycle). Context: after Macy's departure, the ER investigation workload shifted; the new system is being designed by the current People BP leadership (Blair + Sydney).
+4. **Cross-functional alignment on JDNA-wide merit decisions.**
 
 ## Cadence & communication patterns
 
@@ -35,8 +37,8 @@ Manages the People BP function across JDNA corporate populations. Surfaces at DT
 
 ## Political context
 
-- **Complementary to Jacob Gray's coverage.** Jacob + Linsley are the "corporate standpoint" pair she checks in with; Blair sits above them in the People BP hierarchy.
-- **[Open question]** Relationship to Jenny Pund (Director, Retail People BPs) — both are JDNA People BP leaders on different sides (retail vs corporate). Reporting lines not yet confirmed.
+- **Complementary to Jacob Gray's coverage.** Jacob + Linsley are the "corporate standpoint" pair she checks in with; they sit under Seve via the comp line while Blair sits under Jackie via the People BP line.
+- **Peer of Jenny Pund under Jackie.** Both report to Jackie Gessner — Blair on corporate, Jenny on retail.
 
 ## Changelog
 

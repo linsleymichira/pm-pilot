@@ -8,7 +8,12 @@ _Seeded: 2026-04-24. Sources: DTLR Retail Merit Kickoff Meeting (2026-04-17), CL
 - **Title:** VP, Talent Management & HR Compliance — JDNA (per CLAUDE.md). The DTLR merit decks list her as "Compensation, JD North America" / "Compensation, Finish Line" — that's the functional hat she wears on comp calls, not her actual title.
 - **Email:** `jgessner@finishline.com`
 - **Location:** [Assumption] Indianapolis, FL HQ
-- **Relationship to user:** Senior People org leader in user's reporting function (under Seve). Compensation philosophy voice and compliance backstop on JDNA people decisions.
+- **Relationship to user:** Reports directly to Seve Romero. Sits two levels above user (user → Jacob Gray → Seve is the direct chain; Jackie is parallel to Jacob under Seve). Compensation philosophy voice and compliance backstop on JDNA people decisions.
+- **Direct reports (confirmed 2026-04-24):**
+  - **Jenny Pund** (Director, Retail People BPs) — manages April Mcduffie on the DTLR side
+  - **Blair Orlansky** (Manager, Corporate People BPs)
+  - **Sydney Purichia** (People Business Manager)
+  - **Hannah Reeser** (Director, Talent Acquisition)
 
 ## Scope
 
@@ -16,10 +21,11 @@ Owns Talent Management and HR Compliance across JDNA. Operates across comp, comp
 
 ## Current focus areas (as of Apr 2026)
 
-1. **FY26 DTLR retail merit — comp philosophy layer.** Drove the "talent-map-weighted lump sum" framing for SMs above band.
-2. **Cross-brand retail pay band consolidation** (per seve.md) — active thread driven by William Dou.
-3. **People Department All-Hands Apr 28–29, 2026** — handles logistics/reminders (e.g. Apr 17 Google Form nomination reminder per seve.md).
-4. **City Gear pay gap remediation** — co-partner with Morgan on legal/comp strategy.
+1. **HR Scorecard initiative** — **she's the driver** (per 2026-03-13 demo). Setting terminology standards (e.g. "percent of employees that meet expectations or better" vs. "healthy"). Seve sponsors; Macaira executes.
+2. **FY26 DTLR retail merit — comp philosophy layer.** Drove the "talent-map-weighted lump sum" framing for SMs above band.
+3. **Cross-brand retail pay band consolidation** (per seve.md) — active thread driven by William Dou.
+4. **People Department All-Hands Apr 28–29, 2026** — handles logistics/reminders (e.g. Apr 17 Google Form nomination reminder per seve.md).
+5. **City Gear pay gap remediation** — co-partner with Morgan on legal/comp strategy.
 
 ## Commitments & follow-ups
 
@@ -33,8 +39,9 @@ Owns Talent Management and HR Compliance across JDNA. Operates across comp, comp
 
 ## Political context
 
+- **Reports directly to Seve.** Confirmed 2026-04-24. One of Seve's three direct reports alongside Jacob Gray (Comp) and Chad Leathers (People Ops/Tech) — Jackie runs the talent/compliance/comp-philosophy + People BP arm.
+- **Owns the full People BP + TA span:** Jenny Pund (retail BPs), Blair Orlansky (corporate BPs), Sydney Purichia (PBM), Hannah Reeser (TA). Anything touching BPs or recruiting metrics routes through her.
 - **Co-authority with legal.** When Jackie + Morgan align on a comp call, the decision usually follows — Jeff conceded on his initial 3%-for-above-band instinct once they teamed up on 2026-04-17.
-- **In Seve's orbit.** Shows up where Seve delegates; handles the operational layer on People initiatives he sponsors.
 
 ## Changelog
 

@@ -8,7 +8,7 @@ _Seeded: 2026-04-24. Source: DTLR Retail Merit Kickoff Meeting (2026-04-17) — 
 - **Title:** Director, Retail People Business Partners
 - **Email:** `jpund@finishline.com`
 - **Location:** [Assumption] Indianapolis, FL HQ
-- **Relationship to user:** Senior retail People BP leader; sits above the DTLR/FL/Hibbett retail HR partners (including April).
+- **Relationship to user:** Senior retail People BP leader. Reports to Jackie Gessner; manages April Mcduffie and the other JDNA retail People BPs.
 
 ## Note on deck attribution
 
@@ -16,7 +16,11 @@ The first kickoff deck (`DTLR_Retail_Merit_Kickoff`) listed Jenny as "Compensati
 
 ## Scope
 
-Retail People BP function leader across JDNA retail brands. [Assumption] Manages April Mcduffie (DTLR BP) and FL retail BP peers.
+Retail People BP function leader across JDNA retail brands. Reports to Jackie Gessner.
+
+**Direct reports (confirmed 2026-04-24):**
+- **April Mcduffie** — Sr. Regional People BP, DTLR
+- **Sean Smyth** — Manager, Regional People Business Partners
 
 ## Current focus areas (as of Apr 2026)
 
@@ -39,7 +43,7 @@ Retail People BP function leader across JDNA retail brands. [Assumption] Manages
 
 ## Political context
 
-- **[Open question]** Reporting relationship to Blair Orlansky (Manager, People BPs, JDNA) — both are JDNA People BP leaders on different sides (retail vs corporate); lines not yet confirmed.
+- **Peer of Blair Orlansky under Jackie.** Both report to Jackie Gessner — Jenny on the retail BP side, Blair on the corporate BP side.
 - **Newer to the Birmingham legal bench.** First in-person introduction to Morgan was 2026-04-17 — that relationship is still forming.
 
 ## Changelog

@@ -18,14 +18,45 @@
 
 ## People
 
-- **Seve Romero** — SVP, People. Senior People org leader at JDNA.
-- **Jackie Gessner** — VP, Talent Management & HR Compliance.
-- **Jeff Bowden** — SVP Retail & Store Ops, DTLR. Final approver on DTLR retail comp/merit.
-- **April Mcduffie** — Sr. Regional People BP, DTLR. DTLR-side HR operator.
-- **Morgan Pike Epperson** — Sr. Employment Attorney, Birmingham. JDNA legal.
-- **Blair Orlansky** — Manager, People BPs, JDNA. Corporate-side People BP lead.
-- **Jenny Pund** — Director, Retail People BPs. Retail People BP function leader.
-- **Jacob Gray** — Comp team, Finish Line. Primary comp-team counterpart on retail merit.
+_Full profiles in `memory/people/<name>.md`. Org power map in `memory/org-survival.md`._
+
+**User's chain:** Linsley → Jacob Gray → Seve Romero.
+
+### Seve Romero (SVP People, JDNA) — 4 direct reports
+`seve.md`
+
+### Arm 1 — Talent / Compliance / People BPs (Jackie)
+- **Jackie Gessner** (`jackie.md`) — VP, Talent Mgmt & HR Compliance. 4 direct reports: Jenny, Blair, Sydney, Hannah.
+- **Jenny Pund** (`jenny.md`) — Director, Retail People BPs. Manages April + Sean.
+  - **April Mcduffie** (`april.md`) — Sr. Regional People BP, DTLR.
+  - **Sean Smyth** (`sean.md`) — Manager, Regional People Business Partners.
+- **Blair Orlansky** (`blair.md`) — Manager, Corporate People BPs (backfill of Macy's role split).
+- **Sydney Purichia** (`sydney.md`) — Manager, Back-of-House People BPs — JDFL (backfill of Macy's role split). Manages Mya + Kim.
+  - **Mya Weeks** (`mya.md`) — People Business Partner (IC).
+  - **Kim Sturgeon** (`kim.md`) — People Business Partner (IC).
+- **Hannah Reeser** (`hannah.md`) — Director, Talent Acquisition.
+
+### Arm 2 — Compensation (Jacob Gray)
+- **Jacob Gray** (`jacob.md`) — Comp team. **User's direct manager.** Drives cross-brand pay bands.
+
+### Arm 3 — People Operations / Technology (Chad)
+- **Chad Leathers** (`chad.md`) — Sr. Director, People Operations.
+- **Jacob Amick** (`jacob-amick.md`) — Manager, People Technology. Manages Rosa.
+- **William Dou** (`william.md`) — HR Automation & Analytics Specialist. **User's most frequent collaborator.**
+- **Rosa Guzman** (`rosa.md`) — HR Technology Associate (under Jacob Amick).
+
+### Arm 4 — Communications & Employee Engagement (Macaira)
+- **Macaira O'Connell** (`macaira.md`) — Manager, Communications and Employee Engagement. Single-person function, direct report to Seve.
+
+### Cross-functional / external to People org
+- **Anthony Esslinger** (`anthony.md`) — Sr. Engineer, Store Technology. Cross-company Jira admin (not in People org).
+- **Morgan Pike Epperson** (`morgan.md`) — Sr. Employment Attorney, Birmingham (JDNA legal).
+
+### DTLR business
+- **Jeff Bowden** (`jeff.md`) — SVP Retail & Store Ops, DTLR. Clears with Todd Kirsin (CEO, DTLR) and Ryan Geldrich.
+
+### Former employees (historical only)
+- **Macy Miller** (`macy.md`) — former Manager, People BPs under Jackie. Departed; role split → Sydney + Blair.
 
 ## Key Context
 

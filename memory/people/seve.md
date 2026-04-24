@@ -17,12 +17,23 @@ _Updated: 2026-04-20. Seeded from Gmail + Calendar fan-out during `/meeting-prep
 
 Runs People/HR across **all JDNA brands** — Finish Line, Hibbett, Shoe Palace, DTLR (visible via cross-brand pay-band consolidation thread Apr 2026). Not just FL-scoped.
 
+## Direct reports (confirmed 2026-04-24)
+
+Four arms of the People org:
+
+- **Jackie Gessner** — VP, Talent Mgmt & HR Compliance. Talent / compliance / comp-philosophy + People BP arm. Owns Jenny Pund (retail BPs → April + Sean Smyth), Blair Orlansky (corporate BPs), Sydney Purichia (Manager, Back-of-House People BPs — JDFL → Mya + Kim), Hannah Reeser (Director, TA).
+- **Jacob Gray** — Compensation. Comp mechanics / pay-band arm. **User (Linsley) reports to Jacob.**
+- **Chad Leathers** — Sr. Director, People Operations. People Tech / Workday / analytics infrastructure arm. Owns Jacob Amick (Manager, People Technology → Rosa Guzman) and William Dou (HR Automation & Analytics Specialist, IC).
+- **Macaira O'Connell** — Manager, Communications and Employee Engagement. Single-person strategic arm covering internal comms + engagement surveys + action-plan strategy.
+
 ## Current focus areas (as of Apr 2026)
 
 1. **Cross-brand retail pay band consolidation** — active thread driven by William Dou (`wdou@jdnorthamerica.com`). Participants include Jacob Gray (FL), Hannah McGrath + Laurie Bennett + Jared Seigler (Hibbett), David T + Katya B + Jessica C (Shoe Palace), Sarah Church + A. Corral (FL), Carly Keeney (Hibbett). Seve is cc'd rather than driving — owns the outcome, not the day-to-day.
 2. **Korn Ferry (KF Pay) rollout** — external partners Sarah LHeureux, Mark Robinson, Harry Toogood. Seve personally added user + William Dou to the training in Feb 2026. **He sponsored user's access to this tool.**
 3. **FY26 discretionary bonus review** — Comp team flagged to him Apr 8 with a review due **Apr 20, 2026**.
 4. **People Department All-Hands Apr 28–29, 2026** (in-person) — he sent the announcement Apr 7. Jackie Gessner handles the logistics/reminders (e.g. Apr 17 Google Form nomination reminder).
+5. **HR Scorecard initiative** (2026) — sponsor. Standardized people metrics (recruitment, engagement, turnover, succession) for JDNA leaders. Jackie drives; Macaira O'Connell executes; user partners on analytics enablement.
+6. **Bi-Monthly People Department Huddle** — recurring cadence he owns (e.g. 2026-01-22).
 
 ## Cadence & communication patterns
 
