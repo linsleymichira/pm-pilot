@@ -20,6 +20,12 @@
 
 - **Seve Romero** — SVP, People. Senior People org leader at JDNA.
 - **Jackie Gessner** — VP, Talent Management & HR Compliance.
+- **Jeff Bowden** — SVP Retail & Store Ops, DTLR. Final approver on DTLR retail comp/merit.
+- **April Mcduffie** — Sr. Regional People BP, DTLR. DTLR-side HR operator.
+- **Morgan Pike Epperson** — Sr. Employment Attorney, Birmingham. JDNA legal.
+- **Blair Orlansky** — Manager, People BPs, JDNA. Corporate-side People BP lead.
+- **Jenny Pund** — Director, Retail People BPs. Retail People BP function leader.
+- **Jacob Gray** — Comp team, Finish Line. Primary comp-team counterpart on retail merit.
 
 ## Key Context
 
