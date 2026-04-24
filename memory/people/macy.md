@@ -25,8 +25,8 @@ She's referenced in the following meetings in the user's Meet Recordings folder 
 
 ## Current implications
 
-- **Any ER investigation she was driving has been handed off.** [Open question] Who picked up the Rodini Banica matter after her departure.
-- **Her former span is now Sydney + Blair combined.** When reviewing older meetings where "Macy" appears, mentally map her work to whichever successor now owns it (Back-of-House → Sydney; Corporate → Blair).
+- **Rodini Banica investigation was mid-flight at her departure.** She was actively interviewing Rodini on 2025-11-24 ("we're still within the investigation process, can't share more details right now") — ~5 weeks before she left on 2026-01-01. The matter was handed off. [Open question] Who picked it up — most likely Blair (co-investigator on that interview) or Sydney (who inherited Macy's BP span).
+- **Her former span is now Sydney + Blair combined.** When reviewing meetings from before 2026-01-01 where "Macy" appears, mentally map her work to whichever successor now owns it (Back-of-House → Sydney; Corporate → Blair).
 
 ## Changelog
 
