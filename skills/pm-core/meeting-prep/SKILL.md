@@ -5,79 +5,78 @@ description: |
 origin: pm-pilot
 version: 1.0.0
 ---
-
-# Meeting Prep
-
-Gathers cross-channel context before any meeting so you walk in fully prepared. Works for person-based prep (1:1s) and topic-based prep (product syncs, reviews).
-
-## When to Activate
-
-- User says "meeting prep", "prep for my meeting with X", "prep for 1:1"
-- User provides a person name or meeting topic to prepare for
-- User says "what should I discuss with X?"
-
-## Input
-
-The user provides ONE of:
-- **Person name**: e.g., "Sarah Chen", "Marco", "the CTO"
-- **Topic/meeting name**: e.g., "Q3 planning", "API migration review"
-- **Calendar event**: a specific meeting from today's calendar
-
-If no input, check Google Calendar MCP for the next upcoming meeting and prep for that.
-
 ## Execution
 
-### Context Check
-Before gathering, read `context/company.md` and `context/personas.md` if they exist. Use for framing output. After completing the briefing, offer to update context files with any new knowledge about people, projects, or company priorities discovered during research.
+1. Resolve target (simple, single decision)
 
-### Step 0: Resolve Target
+- If the user supplies a **person name**, use that as the search target.
+- If the user supplies a **topic or meeting name**, use that as the query.
+- If **no input**, fetch the next calendar event and use its attendees/title.
+ - If the user provides none of the three input types (person name, topic, or calendar event), fetch the next calendar event and use its attendees/title.
+ - If the fetched calendar event lacks a title or attendee list, prompt the user to provide additional context (person name or topic) before proceeding.
 
-- Person name given: use as search target across all sources.
-- Topic given: use as search query.
-- No input: fetch next meeting from Google Calendar, extract attendees and title.
+2. Quick local context (person-only)
 
-### Step 0.5: Org-Survival + People File Check (Person-Based Only)
+- For a person target, attempt only two local reads: `memory/org-survival.md` and `memory/people/{name}.md`.
+- Extract a 1–3 line "Political Context" from `org-survival.md` if present and recent commitments/preferences from the `people` file.
+- Skip silently if files are missing.
 
-Before gathering from external sources, read two local files:
+3. Parallel data-gathering (independent tasks)
 
-1. **`memory/org-survival.md`** — Check if person has an entry. Extract: what they want, risks they carry, recommended approach. Surface as **Political Context** block (2–3 lines max). Skip silently if not found.
+- Fire independent searches and record success/failure for each:
+  - Calendar (person events in last 14 days / event by title for topic)
+  - Jira (assignee/reporter or text search; 14d for people, 30d for topics)
+  - Slack (messages mentioning person/topic)
+  - Confluence (pages edited or mentioning topic)
+  - GitHub (PRs/issues by person or mentioning topic)
+  - Gmail (threads involving person/topic)
 
-2. **`memory/people/{name}.md`** — Check for accumulated meeting history with this person. Extract: prior commitments they made (were they fulfilled?), communication style, known preferences. Fold into **Their Current Focus** and **Suggested Talking Points**.
+4. Synthesize
 
-This is the highest-signal step — it's the context no live API can replicate.
+- Deterministically merge results: deduplicate, prioritize recent items, and populate the Prep Doc template below. Cite sources for each item. Do not include speculation.
 
-### Step 1: Parallel Data Gathering (Fan-Out)
+- If all sources return no results, inform the user and suggest they either provide additional input or review their personal notes; do not create an empty prep doc.
 
-Launch parallel searches across all connected MCP sources.
+5. Save and surface
 
-**For person-based prep:**
+- Save the full prep doc to the vault using the filename/frontmatter rules and routing rule described below.
+- Immediately display the prep doc inline and confirm the saved path with one line: `Saved: {path}`.
 
-| Source | Query | Extract |
-|:-------|:------|:--------|
-| Google Calendar | Events with person in last 14 days | Meeting history, upcoming meetings |
-| Jira | `assignee = "{person}" OR reporter = "{person}" AND updated >= -14d` | Active issues, recent updates |
-| Slack | Search messages mentioning person | Recent conversations, open threads |
-| Confluence | `contributor = "{person}" AND lastModified > now("-14d")` | Pages they edited recently |
-| GitHub | PRs by author, issues assigned | Recent code activity |
-| Gmail | Threads with person | Email conversations |
+- If the chosen/default vault location is inaccessible or the user declines to choose a location, save the file temporarily to a fallback directory (for example `/tmp/Meetings/`) and notify the user with the temporary path.
 
-**For topic-based prep:**
+6. Time-sensitive shortcut
 
-| Source | Query | Extract |
-|:-------|:------|:--------|
-| Jira | `text ~ "{topic}" AND updated >= -30d` | Related tickets, status |
-| Slack | Search channels and threads for topic | Recent discussions, decisions |
-| Confluence | `text ~ "{topic}" AND lastModified > now("-30d")` | Specs, RFCs, documentation |
-| GitHub | Search issues and PRs mentioning topic | Code changes, open PRs |
-| Gmail | Search threads for topic | Email discussions |
+- If meeting starts in <10 minutes, output the top 3 time-sensitive talking points first, then the full doc.
 
-### Step 2: Synthesize Prep Doc
+Rules: prefer recent data, cite sources, respect privacy, and keep the output scannable (2-minute read).
 
-Merge all results into the output format below. Deduplicate across sources. Prioritize recent items.
+**Filename convention:** `YYYY-MM-DD {Short Title}.md`  matches existing notes like `2026-05-04 Seve 1:1.md`, `2026-05-08 Weekly Data Workshop.md`. Use the meeting summary from Calendar for `{Short Title}` (drop redundant phrases like "TB" only if the calendar event itself doesn't use them). Replace `/` with ` ` (e.g., `Linsley / William TB` → `Linsley William TB`).
+
+**Frontmatter:** Match the vault convention from `.claude/CLAUDE.md`:
+
+```yaml
+---
+title: YYYY-MM-DD {Short Title} (Pre-meeting Prep)
+type: reference
+tags: [JDFinishLine, Meetings, {PersonOrTopic}, ...]
+status: active
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+---
+```
+
+**Path resolution / routing rule:**
+
+Route by attendee email domain: if any attendee has an email address ending with `@jdna.com` (JD North America), save to `3 Work & Wealth/Career/0 JD Finish Line/Meetings/`. Otherwise, prompt the user to choose a save location from their vault. If the user doesn't choose, save to a default `Meetings` folder in the root of the vault. If that default is inaccessible, use the fallback directory described above.
+
+**After saving:**
+1. Confirm the absolute path in the conversation (one line: `Saved: {path}`).
+2. Display the full prep doc inline in the terminal — the user needs to scan it without opening the file.
+3. If the meeting is <10 minutes away, lead the response with the time-sensitive talking points, not the metadata.
 
 ## Output Format
 
-Output directly in conversation (do NOT create a file unless asked):
+The vault file uses the structure below verbatim. The terminal display can compress sections that are empty or boilerplate, but the saved file should be the full structured artifact.
 
 ```markdown
 # Meeting Prep: {Person or Topic}
@@ -116,11 +115,16 @@ Output directly in conversation (do NOT create a file unless asked):
 
 ## Rules
 
-- **Recency bias**: Prefer last 14 days for people, last 30 days for topics.
-- **No speculation**: Only include items found in actual sources. Skip empty sections.
-- **Cite sources**: Always note where information came from.
-- **Keep it scannable**: Readable in 2 minutes before a meeting.
+**Priority rules** (apply first)
+
 - **Respect privacy**: Only include conversations where the user is a participant.
+- **No speculation**: Only include items found in actual sources; omit empty sections.
+- **Cite sources**: Always note where information came from.
+
+**Operational rules**
+
+- **Recency bias**: Prefer last 14 days for people, last 30 days for topics.
+- **Keep it scannable**: Structure content for a 2-minute read before a meeting.
 
 ## Fallback
 
